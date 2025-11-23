@@ -1,0 +1,39 @@
+.background{
+    height: 713px;
+    width: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient( orange, rgb(44, 28, 3));
+}
+.sun{
+    height: 350px;
+    width: 350px;
+    position: fixed;
+    background-color: orange;
+    border-radius:50%;
+    z-index: 1;
+}
+.ysun{
+    height:350px;
+    width: 350px;
+    position: absolute;
+    background-color: yellow;
+    border-radius: 50%;
+    animation: sun 4s linear 3s infinite alternate;
+}
+@keyframes sun{
+    0%{
+        transform: scale(1);
+        box-shadow: none;
+    }
+    50%{
+        transform: scale(1.2);
+        box-shadow: 15px 15px 90px yellow, -15px -15px 90px yellow;
+        
+    }
+    100%{
+        transform: translate(100px,50px);
+        box-shadow: none;
+    }
+}
